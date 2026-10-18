@@ -4,7 +4,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 const ROOT = __dirname;
-const PUBLIC = path.join(ROOT, 'public');
+const PUBLIC = ROOT;
 const PORT = Number(process.env.PORT || 3000);
 const ADMIN_KEY = process.env.ADMIN_KEY || '';
 const DATA_DIR = path.join(ROOT, 'data');
