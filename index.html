@@ -1,7 +1,253 @@
+
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova Market | Fashion & Everyday Style</title><meta name="description" content="Shop clothing, shoes and accessories at Nova Market. Great everyday style with prices in Pakistani rupees and Cash on Delivery."><meta name="robots" content="index,follow"><meta name="theme-color" content="#111827"><link rel="canonical" href="/"><link rel="stylesheet" href="/styles.css"></head>
-<body><header class="topbar"><a class="brand" href="/">NOVA<span>MARKET</span></a><nav><a href="#products">Shop</a><a href="#why">Our promise</a><a href="/admin.html">Admin</a></nav><button id="cart-open" class="cart-btn">Cart <b id="cart-count">0</b></button></header>
-<section class="hero"><div><p class="eyebrow">STYLE FOR EVERY DAY</p><h1>Wear your<br><em>own story.</em></h1><p class="hero-copy">Fresh fashion, everyday footwear and finishing touches — thoughtfully picked for your everyday style.</p><a class="primary-btn" href="#products">Explore the collection</a><p class="trust">✓ Prices in PKR &nbsp; ✓ Cash on Delivery</p></div><div class="hero-art"><div class="hero-circle"></div><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85" alt="Modern fashion retail store"></div></section>
-<main><section id="products" class="section"><div class="section-head"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Find your next favourite</h2></div><input id="search" type="search" placeholder="Search clothing, shoes..." aria-label="Search products"></div><div id="categories" class="categories"></div><div id="product-grid" class="product-grid"><p>Loading products…</p></div></section><section id="why" class="why"><p class="eyebrow">THE NOVA PROMISE</p><h2>Shopping, without the fuss.</h2><div class="benefits"><div><b>01</b><h3>Style that works</h3><p>Everyday pieces for your own look.</p></div><div><b>02</b><h3>Easy checkout</h3><p>Place your order with Cash on Delivery.</p></div><div><b>03</b><h3>Real support</h3><p>We contact you to confirm order details.</p></div></div></section></main>
-<footer><a class="brand" href="/">NOVA<span>MARKET</span></a><p>© <span id="year"></span> Nova Market. All rights reserved.</p><p>Pakistan · Prices in PKR</p></footer>
-<div id="cart-drawer" class="drawer" aria-hidden="true"><div class="drawer-panel"><div class="drawer-head"><h2>Your cart</h2><button id="cart-close" class="icon-btn" aria-label="Close cart">×</button></div><div id="cart-lines"></div><div class="cart-total"><span>Total</span><strong id="cart-total">Rs 0</strong></div><h3>Delivery details</h3><form id="checkout-form"><label>Full name<input name="name" required autocomplete="name"></label><label>Phone number<input name="phone" required type="tel" autocomplete="tel" placeholder="03xx xxxxxxx"></label><label>City<input name="city" required autocomplete="address-level2"></label><label>Full address<textarea name="address" required autocomplete="street-address"></textarea></label><p class="small-note">Payment: Cash on Delivery (COD)</p><button class="primary-btn full" type="submit">Place order</button><p id="checkout-message" role="status"></p></form></div></div><script src="/app.js" defer></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nova Market Pakistan | Fashion, Shoes & Accessories</title>
+
+  <meta
+    name="description"
+    content="Shop fashion, stylish watches, shoes and everyday accessories at Nova Market Pakistan. Explore products with prices in PKR and convenient Cash on Delivery."
+  >
+
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#111827">
+  <meta name="author" content="Nova Market">
+
+  <link
+    rel="canonical"
+    href="https://nova-market-v2-production.up.railway.app/"
+  >
+
+  <!-- Social sharing: Facebook, WhatsApp and other platforms -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nova Market">
+  <meta
+    property="og:title"
+    content="Nova Market Pakistan | Fashion, Shoes & Accessories"
+  >
+  <meta
+    property="og:description"
+    content="Discover everyday fashion, shoes, watches and accessories at Nova Market Pakistan. Prices in PKR with Cash on Delivery."
+  >
+  <meta
+    property="og:url"
+    content="https://nova-market-v2-production.up.railway.app/"
+  >
+  <meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    name="twitter:title"
+    content="Nova Market Pakistan | Fashion, Shoes & Accessories"
+  >
+  <meta
+    name="twitter:description"
+    content="Shop everyday fashion, shoes and accessories in Pakistan. Prices in PKR and Cash on Delivery."
+  >
+
+  <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Nova Market home">
+      NOVA<span>MARKET</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#products">Shop</a>
+      <a href="#why">Our promise</a>
+      <a href="/admin.html">Admin</a>
+    </nav>
+
+    <button
+      id="cart-open"
+      class="cart-btn"
+      type="button"
+      aria-label="Open shopping cart"
+    >
+      Cart <b id="cart-count">0</b>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">STYLE FOR EVERY DAY</p>
+
+      <h1>Wear your<br><em>own story.</em></h1>
+
+      <p class="hero-copy">
+        Fresh fashion, everyday footwear and finishing touches —
+        thoughtfully picked for your everyday style.
+      </p>
+
+      <a class="primary-btn" href="#products">
+        Explore the collection
+      </a>
+
+      <p class="trust">
+        ✓ Prices in PKR &nbsp; ✓ Cash on Delivery
+      </p>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-circle"></div>
+
+      <img
+        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85"
+        alt="Modern fashion retail store"
+        fetchpriority="high"
+      >
+    </div>
+  </section>
+
+  <main>
+    <section id="products" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>Find your next favourite</h2>
+        </div>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Search clothing, shoes..."
+          aria-label="Search products"
+        >
+      </div>
+
+      <div id="categories" class="categories"></div>
+
+      <div id="product-grid" class="product-grid" aria-live="polite">
+        <p>Loading products…</p>
+      </div>
+    </section>
+
+    <section id="why" class="why">
+      <p class="eyebrow">THE NOVA PROMISE</p>
+
+      <h2>Shopping, without the fuss.</h2>
+
+      <div class="benefits">
+        <div>
+          <b>01</b>
+          <h3>Style that works</h3>
+          <p>Everyday pieces for your own look.</p>
+        </div>
+
+        <div>
+          <b>02</b>
+          <h3>Easy checkout</h3>
+          <p>Place your order with Cash on Delivery.</p>
+        </div>
+
+        <div>
+          <b>03</b>
+          <h3>Real support</h3>
+          <p>We contact you to confirm order details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="/" aria-label="Nova Market home">
+      NOVA<span>MARKET</span>
+    </a>
+
+    <p>
+      © <span id="year"></span> Nova Market. All rights reserved.
+    </p>
+
+    <p>Pakistan · Prices in PKR</p>
+  </footer>
+
+  <div id="cart-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <h2>Your cart</h2>
+
+        <button
+          id="cart-close"
+          class="icon-btn"
+          type="button"
+          aria-label="Close cart"
+        >
+          ×
+        </button>
+      </div>
+
+      <div id="cart-lines"></div>
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cart-total">Rs 0</strong>
+      </div>
+
+      <h3>Delivery details</h3>
+
+      <form id="checkout-form">
+        <label>
+          Full name
+          <input
+            name="name"
+            required
+            autocomplete="name"
+          >
+        </label>
+
+        <label>
+          Phone number
+          <input
+            name="phone"
+            required
+            type="tel"
+            autocomplete="tel"
+            placeholder="03xx xxxxxxx"
+          >
+        </label>
+
+        <label>
+          City
+          <input
+            name="city"
+            required
+            autocomplete="address-level2"
+          >
+        </label>
+
+        <label>
+          Full address
+          <textarea
+            name="address"
+            required
+            autocomplete="street-address"
+          ></textarea>
+        </label>
+
+        <p class="small-note">
+          Payment: Cash on Delivery (COD)
+        </p>
+
+        <button class="primary-btn full" type="submit">
+          Place order
+        </button>
+
+        <p id="checkout-message" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="/app.js" defer></script>
+
+</body>
+</html>
